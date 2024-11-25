@@ -1,9 +1,8 @@
-# Site settings
 title: Pintu Bhattacharya Blogs
 email: info@pintubhattacharya.com
 description: >-
   Write your blog description here. This will appear in your document head meta.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # Leave empty if your site is at the root
 url: "https://blog.pintubhattacharya.com"
 github_username: pintubhattacharyaa
 
@@ -11,8 +10,8 @@ github_username: pintubhattacharyaa
 markdown: kramdown
 sass:
   sass_dir: _sass
-  style: compressed  # This will minify your CSS
-  sourcemap: never   # Optional: disable sourcemaps in production
+  style: compressed
+  sourcemap: never
 
 # Plugin settings
 plugins:
