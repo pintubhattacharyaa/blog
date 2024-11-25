@@ -1,0 +1,19 @@
+# Jekyll build output
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Bundler files
+.bundle/
+vendor/
+
+# Mac files
+.DS_Store
+
+# Environment files
+.env
+
+# Editor files
+.vscode/
+.idea/

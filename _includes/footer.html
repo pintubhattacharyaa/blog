@@ -1,0 +1,10 @@
+<footer class="site-footer bg-gray-100 mt-12">
+    <div class="container mx-auto px-4 py-8">
+      <div class="text-center text-gray-600">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        {% if site.email %}
+          <p>Contact: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </footer>
