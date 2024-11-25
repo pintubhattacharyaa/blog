@@ -1,0 +1,42 @@
+# Site settings
+title: Pintu Bhattacharya Blogs
+email: info@pintubhattacharya.com
+description: >-
+  Write your blog description here. This will appear in your document head meta.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://blog.pintubhattacharya.com"
+github_username: pintubhattacharyaa
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Pintu Bhattacharya"  # Changed from "Your Name" to your name
+      
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
