@@ -9,18 +9,17 @@ github_username: pintubhattacharyaa
 
 # Build settings
 markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed  # This will minify your CSS
+  sourcemap: never   # Optional: disable sourcemaps in production
+
+# Plugin settings
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - .git/
+  - jekyll-paginate  # Add this for pagination
 
 # Collections
 collections:
@@ -35,8 +34,21 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Pintu Bhattacharya"  # Changed from "Your Name" to your name
-      
+      author: "Pintu Bhattacharya"
+
 # Pagination
 paginate: 5
 paginate_path: "/page:num/"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/
+  - README.md
+  - LICENSE
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
