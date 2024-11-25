@@ -1,0 +1,171 @@
+@import "variables";
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacing-unit;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: $spacing-unit;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color $transition-speed ease;
+
+  &:hover {
+    color: $primary-color-dark;
+  }
+}
+
+/* Header styles */
+.site-header {
+  padding: $spacing-unit 0;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 2 * $spacing-unit;
+
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  nav {
+    margin-top: $spacing-unit;
+
+    a {
+      margin-right: $spacing-unit;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* Post styles */
+.post {
+  margin-bottom: 3 * $spacing-unit;
+
+  .post-title {
+    font-size: 2rem;
+    margin-bottom: 0.5 * $spacing-unit;
+
+    a {
+      color: $text-color;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .post-meta {
+    color: $text-light;
+    margin-bottom: $spacing-unit;
+    font-size: 0.9rem;
+  }
+
+  .post-content {
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: $spacing-unit 0;
+    }
+
+    code {
+      background-color: $border-color;
+      padding: 0.2rem 0.4rem;
+      border-radius: $border-radius;
+    }
+
+    pre {
+      background-color: $border-color;
+      padding: $spacing-unit;
+      border-radius: $border-radius;
+      overflow-x: auto;
+      margin: $spacing-unit 0;
+    }
+  }
+}
+
+/* Pagination styles */
+.pagination {
+  margin: 2 * $spacing-unit 0;
+  padding: $spacing-unit 0;
+  border-top: 1px solid $border-color;
+  text-align: center;
+
+  .page-item {
+    display: inline-block;
+    margin: 0 0.5 * $spacing-unit;
+
+    a {
+      padding: 0.5 * $spacing-unit $spacing-unit;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+
+      &:hover {
+        background-color: $primary-color;
+        color: white;
+        border-color: $primary-color;
+      }
+    }
+
+    &.active a {
+      background-color: $primary-color;
+      color: white;
+      border-color: $primary-color;
+    }
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 ($spacing-unit * 1.5);
+  }
+
+  .site-header {
+    text-align: center;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: $spacing-unit;
+    }
+  }
+
+  .post-title {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,249 @@
+@import "variables";
+@import "main";
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// Header
+.site-header {
+  padding: 1rem 0;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary-color-dark);
+    }
+  }
+}
+
+// Navigation
+.site-nav {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// Posts
+.post-list {
+  margin: 2rem 0;
+
+  article {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .post-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+
+    a {
+      color: var(--heading-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .post-meta {
+    color: var(--meta-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-excerpt {
+    margin-bottom: 1rem;
+  }
+}
+
+// Individual post
+.post {
+  margin: 2rem 0;
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  .post-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content {
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem 0;
+    }
+
+    code {
+      background-color: var(--code-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+// Footer
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background-color: var(--footer-bg);
+  color: var(--footer-text-color);
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: var(--footer-link-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  .page-item {
+    a {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 3px;
+      text-decoration: none;
+      color: var(--text-color);
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+      }
+    }
+
+    &.active a {
+      background-color: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .site-header {
+    .header-content {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+
+  .site-nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+  }
+}
+
+// Print styles
+@media print {
+  .site-header,
+  .site-footer,
+  .pagination {
+    display: none;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
