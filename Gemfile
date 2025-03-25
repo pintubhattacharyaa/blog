@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.2"
+gem "liquid", "~> 4.0" # Add this line to specify a compatible liquid version
 gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
