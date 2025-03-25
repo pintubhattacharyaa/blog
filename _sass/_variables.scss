@@ -1,35 +1,49 @@
-// Sass variables
-$text-color: #333;
-$text-light: #666;
-$border-color: #eee;
-$background-color: #fff;
-$primary-color: #0066cc;
-$primary-color-dark: #004d99;
-$link-color: #0066cc;
-
-$spacing-unit: 1rem;
-$container-width: 800px;
-
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$base-font-size: 16px;
-$base-line-height: 1.6;
-
-$border-radius: 4px;
-$transition-speed: 0.3s;
-
-// CSS custom properties (variables)
+// CSS Variables (accessible in the browser)
 :root {
-  --text-color: #{$text-color};
-  --meta-color: #{$text-light};
-  --border-color: #{$border-color};
-  --bg-color: #{$background-color};
-  --primary-color: #{$primary-color};
-  --primary-color-dark: #{$primary-color-dark};
-  --heading-color: #222222;
-  --code-bg: #f5f5f5;
-  --header-bg: #{$background-color};
-  --footer-bg: #f8f8f8;
-  --footer-text-color: #{$text-light};
-  --footer-link-color: #555555;
-  --nav-link-color: #444444;
-}
+    // Theme colors
+    --primary-color: #0066cc;
+    --primary-color-dark: #004c99;
+    
+    // Text colors
+    --text-color: #333333;
+    --heading-color: #222222;
+    --meta-color: #666666;
+    --footer-text-color: #f8f8f8;
+    --footer-link-color: #dddddd;
+    --nav-link-color: #444444;
+    
+    // Background colors
+    --bg-color: #ffffff;
+    --header-bg: #ffffff;
+    --footer-bg: #333333;
+    --code-bg: #f5f5f5;
+    
+    // Border colors
+    --border-color: #eeeeee;
+  }
+  
+  // SCSS Variables (used during compilation)
+  $primary-color: #0066cc;
+  $primary-color-dark: #004c99;
+  $text-color: #333333;
+  $text-light: #666666;
+  $background-color: #ffffff;
+  $border-color: #eeeeee;
+  $link-color: $primary-color;
+  
+  // Typography
+  $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  $base-font-size: 16px;
+  $base-line-height: 1.6;
+  
+  // Layout
+  $spacing-unit: 1rem;
+  $container-width: 1200px;
+  $border-radius: 3px;
+  $transition-speed: 0.3s;
+  
+  // Media query breakpoints
+  $screen-sm: 576px;
+  $screen-md: 768px;
+  $screen-lg: 992px;
+  $screen-xl: 1200px;
