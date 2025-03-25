@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
     {% if jekyll.environment == "production" %}
-    <link rel="stylesheet" href="{{ '/assets/css/styles.scss' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     {% else %}
-    <link rel="stylesheet" href="{{ '/assets/css/main.scss' | relative_url }}?{{ site.time | date: '%s%N' }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
     {% endif %}
 </head>
 <body>
