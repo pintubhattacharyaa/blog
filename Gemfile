@@ -1,8 +1,10 @@
 source "https://rubygems.org"
 
+# Use Jekyll 4.3.x
 gem "jekyll", "~> 4.3.2"
-gem "liquid", "~> 4.0" # Add this line to specify a compatible liquid version
-gem "github-pages", group: :jekyll_plugins
+
+# These dependencies are compatible with Jekyll 4.x
+gem "webrick", "~> 1.7"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
